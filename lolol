@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ededed;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #6366f1;
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-500/30 selection:text-indigo-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter">
+                <span class="gradient-text">CREATIVE</span>.JS
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="md:hidden text-white" id="menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/10 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-8">
+                    Crafting <span class="gradient-text italic">Digital</span> Experiences.
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl">
+                    I'm a full-stack developer and UI/UX designer focused on building high-performance websites that leave a lasting impression.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#work" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full text-center transition-all duration-300">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-4 glass hover:bg-white/5 text-white font-semibold rounded-full text-center transition-all duration-300">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-24 bg-[#0d0d0d]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Selected Work</h2>
+                    <p class="text-gray-400">A collection of projects built with passion and precision.</p>
+                </div>
+                <div class="text-indigo-400 font-semibold cursor-pointer hover:underline">
+                    View Archive →
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden glass mb-6">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-900 to-purple-900 flex items-center justify-center p-12 transition-transform duration-500 group-hover:scale-105">
+                             <i data-lucide="layout" class="w-16 h-16 text-indigo-200 opacity-50"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Nexus Analytics Platform</h3>
+                    <p class="text-gray-400 mb-4">Real-time data visualization and processing dashboard for enterprise teams.</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-3 py-1 glass rounded-full text-indigo-300">React</span>
+                        <span class="text-xs px-3 py-1 glass rounded-full text-indigo-300">D3.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-video w-full rounded-2xl overflow-hidden glass mb-6">
+                        <div class="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center p-12 transition-transform duration-500 group-hover:scale-105">
+                             <i data-lucide="shopping-bag" class="w-16 h-16 text-pink-200 opacity-50"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Ethereal E-Commerce</h3>
+                    <p class="text-gray-400 mb-4">A minimalist shopping experience with seamless animations and headless CMS.</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-3 py-1 glass rounded-full text-pink-300">Next.js</span>
+                        <span class="text-xs px-3 py-1 glass rounded-full text-pink-300">Stripe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">My Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl glass hover:border-indigo-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="code-2" class="text-indigo-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Web Development</h4>
+                    <p class="text-gray-400 leading-relaxed">Modern, fast, and scalable web applications using the latest technologies.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl glass hover:border-purple-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="framer" class="text-purple-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">UI/UX Design</h4>
+                    <p class="text-gray-400 leading-relaxed">Designing intuitive interfaces that prioritize user experience and conversion.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl glass hover:border-pink-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-pink-600/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="text-pink-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Optimization</h4>
+                    <p class="text-gray-400 leading-relaxed">Performance tuning and SEO strategies to ensure your site reaches its peak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-[#0d0d0d]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Let's create something <span class="gradient-text">amazing</span>.</h2>
+                    <p class="text-gray-400 text-lg mb-8">Currently available for freelance projects and collaborations. Drop me a message and I'll get back to you within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full glass flex items-center justify-center text-indigo-400">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <span>hello@creative.js</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full glass flex items-center justify-center text-indigo-400">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <span>linkedin.com/in/creative-dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-indigo-500" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-indigo-500" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <textarea class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-indigo-500 h-32" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 text-sm">© 2024 Creative.js - All Rights Reserved</p>
+            <div class="flex gap-8 text-gray-500 text-sm">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle logic
+        const menuBtn = document.getElementById('menu-btn');
+        menuBtn.addEventListener('click', () => {
+            // Mobile navigation can be expanded here
+            console.log("Menu toggled");
+        });
+
+        // Contact form simple handler
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "Message Sent!";
+            btn.classList.replace('bg-indigo-600', 'bg-green-600');
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-600', 'bg-indigo-600');
+                contactForm.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
